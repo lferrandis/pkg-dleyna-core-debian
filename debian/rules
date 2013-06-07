@@ -1,0 +1,13 @@
+#!/usr/bin/make -f
+
+%:
+	dh $@ --with autotools_dev --parallel
+
+override_dh_strip:
+	dh_strip --dbg-package=libdleyna-core-1.0-dbg
+
+override_dh_makeshlibs:
+	dh_makeshlibs -V
+
+override_dh_install:
+	dh_install --list-missing

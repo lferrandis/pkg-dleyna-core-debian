@@ -1,0 +1,67 @@
+Source: dleyna-core
+Section: libs
+Priority: optional
+Maintainer: Emanuele Aina <emanuele.aina@collabora.com> 
+Build-Depends: debhelper (>= 9),
+               autotools-dev,
+               libglib2.0-dev,
+               libgupnp-1.0-dev (>= 0.19.1)
+Standards-Version: 3.9.4
+Homepage: https://01.org/dleyna/
+Vcs-Git: git://anonscm.debian.org/collab-maint/pkg-dleyna-core.git
+Vcs-Browser: http://anonscm.debian.org/gitweb/?p=collab-maint/pkg-dleyna-core.git;a=summary
+
+Package: libdleyna-core-1.0-1
+Architecture: any
+Multi-Arch: same
+Depends: ${misc:Depends},
+         ${shlibs:Depends}
+Pre-Depends: ${misc:Pre-Depends}
+Description: Utility functions for higher level dLeyna components
+ dleyna-core is a library of utility functions that are used by the higher
+ level dLeyna libraries that communicate with DLNA devices, e.g.,
+ dleyna-server. In brief, it provides APIs for logging, error, settings and
+ task management and an IPC abstraction API.
+ .
+ dLeyna is an umbrella project hosting a number of middleware components
+ designed to make it easy for developers to integrate DLNA functionality into
+ their applications.
+
+Package: libdleyna-core-1.0-dev
+Architecture: any
+Section: libdevel
+Depends: libdleyna-core-1.0-1 (= ${binary:Version}),
+         libglib2.0-dev,
+         libgupnp-1.0-dev (>= 0.19.1),
+         pkg-config,
+         ${misc:Depends}
+Description: Utility functions for higher level dLeyna components (development files)
+ dleyna-core is a library of utility functions that are used by the higher
+ level dLeyna libraries that communicate with DLNA devices, e.g.,
+ dleyna-server. In brief, it provides APIs for logging, error, settings and
+ task management and an IPC abstraction API.
+ .
+ dLeyna is an umbrella project hosting a number of middleware components
+ designed to make it easy for developers to integrate DLNA functionality into
+ their applications.
+ .
+ This package contains the development files.
+
+Package: libdleyna-core-1.0-dbg
+Section: debug
+Priority: extra
+Architecture: any
+Depends: libdleyna-core-1.0-1 (= ${binary:Version}),
+         ${misc:Depends}
+Multi-Arch: same
+Description: Utility functions for higher level dLeyna components (debug files)
+ dleyna-core is a library of utility functions that are used by the higher
+ level dLeyna libraries that communicate with DLNA devices, e.g.,
+ dleyna-server. In brief, it provides APIs for logging, error, settings and
+ task management and an IPC abstraction API.
+ .
+ dLeyna is an umbrella project hosting a number of middleware components
+ designed to make it easy for developers to integrate DLNA functionality into
+ their applications.
+ .
+ This package contains the debug files.
